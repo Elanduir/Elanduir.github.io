@@ -24,7 +24,7 @@ def process_pdf(pdf_path, output_folder):
     return text_output_path, [os.path.join(image_output_folder, image_file) for image_file in os.listdir(image_output_folder)]
 
 def send_request(prompt):
-    openai.api_key = "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"
+    openai.api_key = os.getenv("OPENAI_API_KEY")
     completion = openai.ChatCompletion.create(
             model = "gpt-3.5-turbo",
             messages=[
