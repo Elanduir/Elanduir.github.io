@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brioche mit Salbei</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .recipe {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .recipe-images img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .recipe-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .recipe-info .time {
+            flex-basis: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .recipe-info .time .value {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .recipe-info .time .label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .recipe-info .nutrition {
+            flex-basis: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .recipe-info .nutrition .value {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .recipe-info .nutrition .label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .recipe-attributes {
+            margin-top: 20px;
+        }
+        
+        .recipe-attributes ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .recipe-attributes ul li {
+            margin: 10px 0;
+        }
+        
+        .recipe-attributes ul li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .recipe-instructions {
+            margin-top: 20px;
+        }
+        
+        .recipe-instructions ol {
+            counter-reset: steps;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .recipe-instructions ol li {
+            counter-increment: steps;
+            margin-bottom: 10px;
+        }
+        
+        .recipe-instructions ol li::before {
+            content: counter(steps);
+            font-weight: bold;
+            background-color: #666;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="recipe">
+        <h1>Brioche mit Salbei</h1>
+        
+        <div class="recipe-images">
+            <img src="./Brioche mit Salbei/image-000.png" alt="Bild 1">
+            <img src="./Brioche mit Salbei/image-001.png" alt="Bild 2">
+            <img src="./Brioche mit Salbei/image-002.png" alt="Bild 3">
+        </div>
+        
+        <div class="recipe-info">
+            <div class="time">
+                <div class="value">25 Min.</div>
+                <div class="label">Aktiv</div>
+            </div>
+            <div class="time">
+                <div class="value">3 Std. 25 Min.</div>
+                <div class="label">Gesamt</div>
+            </div>
+            <div class="nutrition">
+                <div class="value">294 kcal</div>
+                <div class="label">Pro 100 g</div>
+            </div>
+        </div>
+        
+        <div class="recipe-attributes">
+            <ul>
+                <li><span>Kategorien:</span>Vegetarisch</li>
+                <li><span>Fett:</span>9 g</li>
+                <li><span>Kohlenhydrate:</span>44 g</li>
+                <li><span>Eiweiss:</span>9 g</li>
+                <li><span>Pro 100 g</span></li>
+            </ul>
+        </div>
+        
+        <div class="recipe-instructions">
+            <h2>Das brauchts für 1 Brot</h2>
+            <h3>Vorteig</h3>
+            <ol>
+                <li>Mehl in eine Schüssel geben, in der Mitte eine Mulde eindrücken.</li>
+                <li>Hefe, Zucker und Milch in die Mulde geben, mit einer Kelle zu einem Brei anrühren.</li>
+                <li>Zugedeckt ca. 30 Min. quellen lassen.</li>
+            </ol>
+            
+            <h3>Teig</h3>
+            <ol>
+                <li>Mehl, Salbei und Salz mischen, mit dem Ei zum Vorteig geben.</li>
+                <li>Mit dem Knethacken der Küchenmaschine ca. 10 Min. zu einem glatten Teig kneten.</li>
+                <li>Butter nach und nach beigeben, ca. 10 Min. weiterkneten.</li>
+                <li>Teig zugedeckt bei Raumtemperatur ca. 1 1/2 Std. aufgehen lassen.</li>
+            </ol>
+            
+            <h3>Formen</h3>
+            <ol>
+                <li>Teig in 4 Portionen teilen, längs etwas flach drücken, sodass je ca. 20 cm lange Rechtecke entstehen.</li>
+                <li>Teige von der Längsseite her zu Rollen formen, in die vorbereitete Form legen.</li>
+                <li>Zugedeckt nochmals ca. 30 Min. aufgehen lassen.</li>
+                <li>Teige mit dem Ei bestreichen, Salz und Pfeffer darüberstreuen, Salbeiblätter darauflegen, etwas andrücken.</li>
+            </ol>
+            
+            <h3>Backen</h3>
+            <ol>
+                <li>Ca. 30 Min. in der Mitte des auf 180°C vorgeheizten Ofens.</li>
+                <li>Herausnehmen, etwas abkühlen, aus der Form nehmen, auf einem Gitter auskühlen.</li>
+            </ol>
+        </div>
+        
+        <div class="recipe-info">
+            <div class="source">
+                <span>Das Rezept findest du hier wieder:</span>
+                <a href="fooby.ch/de/rezepte/24301/">fooby.ch/de/rezepte/24301/</a>
+            </div>
+            <div class="serves">
+                <span>Dazu passt:</span>
+                <span>Gesalzene Butter</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
