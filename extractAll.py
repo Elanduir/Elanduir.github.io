@@ -24,7 +24,7 @@ def process_pdf(pdf_path, output_folder):
     return text_output_path, [os.path.join(image_output_folder, image_file) for image_file in os.listdir(image_output_folder)]
 
 def send_request(prompt):
-    openai.api_key = "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"
+    openai.api_key = "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"
     completion = openai.ChatCompletion.create(
             model = "gpt-3.5-turbo",
             messages=[
@@ -75,25 +75,27 @@ def main(input_folder, output_folder):
 
     # Print the extracted data to the console
     for data in extracted_data:
+        print("Starting prompt for " + data['text_path'])
         textPrompt = f"Create a static html for the following recipe in german supporting the schema.org/recipe standard using these images {data['image_paths']} as showcase linking them also in the html also categorize it correctly: "
         recipe = ("").join(open(data['text_path']).readlines())
+        htmlSuffix = "only img" if len(recipe) < 10 else ""
         try: 
             response = send_request(textPrompt + recipe)
             html = response["content"]
-            htmlPath = data['text_path'][:-4] + ".html"
+            htmlPath = data['text_path'][:-4] + htmlSuffix + ".html"
             with open(htmlPath, 'w') as outfile:
                 outfile.write(html)
         except Exception as e:
              print(f"Caught an exception: {e}")
         print("completed: " + filename)
 
-    folder_path = "./recipes/output"
-    output_file = "index.html"
+    folder_path = "./recipes/outputBatch2"
+    output_file = "indexBatch2.html"
     create_index_html(folder_path, output_file)
 
 
 if __name__ == "__main__":
-    input_folder = "./recipes"
-    output_folder = "./recipes/output"
+    input_folder = "./recipesFlat/pdf/"
+    output_folder = "./recipes/outputBatch2"
     main(input_folder, output_folder)
 
